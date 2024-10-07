@@ -12,9 +12,9 @@ const { google } = require('googleapis');
 const { ClientOptions } = require('google-api-core');
 
 const PORT = process.env.PORT || 3000;
-const PROJECT = "daniels-dl-playground";
+const PROJECT = "bangkit-academy-437808";
 const REGION = "us-central1";
-const MODEL_NAME = "efficientnet_model_1_10_classes";
+const MODEL_NAME = "food_vision";
 const CLASSES = ['chicken_curry', 'chicken_wings', 'fried_rice', 'grilled_salmon', 'hamburger', 'ice_cream', 'pizza', 'ramen', 'steak', 'sushi'];
 
 const init = async () => {
@@ -76,7 +76,7 @@ const makePrediction = async (image) => {
     const ml = google.ml({
         version: 'v1',
         auth: new google.auth.GoogleAuth({
-            keyFile: 'daniels-dl-playground-4edbcb2e6e37.json',
+            keyFile: 'bangkit-academy-437808.json',
             scopes: ['https://www.googleapis.com/auth/cloud-platform']
         }),
         clientOptions
